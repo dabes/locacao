@@ -29,13 +29,14 @@ if (isset($_POST['titulo'])) {
     }
 
     // se nao existir id ele vai inserir senao atualizar
-    if (!isset($_GET['id'])) {
+    if (isset($_GET['id'])) {
         $id = $_GET['id'];
     } else {
         $id = false;
     }
     $cadastro_edit = "Editar";
     $cadastro->imovel = $dados_imovel;
+    $cadastro->id = $id;
     $cadastro->Cadastrar();
 }
 

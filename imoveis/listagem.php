@@ -264,8 +264,10 @@ class Listar_imovel
             $imagem = imagem_blob_to_base64($imagem_data['imagem']);
             $mimetype = $imagem_data['mimetype'];
             $imagens .= "<div class='col-sm-3'>
+                            <a href='javascript:;' class='pop'>
                                 <img  class='img-fluid' src='data:" . $mimetype . ";base64," . $imagem . "'/>
-                             </div> 
+                            </a>
+                        </div> 
             ";
         }
 

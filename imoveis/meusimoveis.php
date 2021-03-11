@@ -84,6 +84,7 @@ $title = "Sistema de Locação de imóveis - Meus Imóveis";
                                 </td>
                                 <td>
                                     <a href="/imoveis/editar?id=<?= $imovel->id ?>" class="btn btn-primary">Editar</a>
+                                    <a href="/imoveis/apagar?id=<?= $imovel->id ?>" class="btn btn-primary" onclick="if (!confirm('Deseja mesmo apagar o imóvel?')) return false;">Apagar</a>
                                 </td>
                             </tr>
                         <?php } ?>
